@@ -1,5 +1,7 @@
 ## KeepSoundbarAwake
 
+(moved here from RobUttley/KeepSoundbarAwake)
+
 Initial release.
 Play a 19kHz (basically inaudible) tone, on a regular period, in an effort to keep your external audio output device (soundbar, amplifier, speakers) awake
 
