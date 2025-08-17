@@ -8,16 +8,35 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Windows.Compatibility" Version="9.0.8" />
+  <EmbeddedResource Include="keep-awake-19khz_3s.wav" />
+  <EmbeddedResource Include="keep-awake-1khz_3s.wav" />
+</ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ManagedBass" Version="3.1.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="keep-awake-19khz_3s.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="keep-awake-1khz_3s.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+  <!-- Only copy libbass.dylib if the target RuntimeIdentifier is an OSX one -->
+  <None Update="libbass.dylib" Condition="$(RuntimeIdentifier.StartsWith('osx'))">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+
+  <!-- Only copy bass.dll if the target RuntimeIdentifier is a Windows one -->
+  <None Update="bass.dll" Condition="$(RuntimeIdentifier.StartsWith('win'))">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+
+
+  <!-- Linux x64 -->
+  <None Update="libbass_x86_64.so" Condition="$(RuntimeIdentifier) == 'linux-x64'">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+
+  <!-- Linux ARM64 -->
+  <None Update="libbass_aarch64.so" Condition="$(RuntimeIdentifier) == 'linux-arm64'">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
   </ItemGroup>
 
 </Project>

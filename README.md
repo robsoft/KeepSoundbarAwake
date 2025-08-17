@@ -1,11 +1,18 @@
 ## KeepSoundbarAwake
 
-todo:  
+tones came from 
+https://www.wavtones.com/functiongenerator.php
 
-- Work from command line options (period, sound file, active hours)
-- Can we make it work on Mac/Linux too?  
-- Can we embed the default sound into the exe?   
-- Can we make a standalone monolithic exe?  
-- Vet the duration of a user-supplied file (don't exceed 3s because of synchronous play call)  
-- 
+
+on Mac you might need to do this to the libbass.dylib file;  
+```
+chmod +x libbass.dylib  
+xattr -d com.apple.quarantine libbass.dylib  
+```
+Possibly something similar to the Linux version
+
+
+todo:  
+- Test Mac M3, Linux x64 and arm, Windows x86 platforms  
+- Instructions for building on each platform  
 
