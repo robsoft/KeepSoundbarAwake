@@ -365,3 +365,10 @@ FodyWeavers.xsd
 # Mac-VSCode-dev stuff
 .DS_Store
 *.generated.sln
+temp_publish_output/
+dist/
+bass24-linux/
+bass24-macosx/
+bass24-windows/
+.vscode/
+
