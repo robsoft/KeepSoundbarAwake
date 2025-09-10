@@ -94,4 +94,4 @@ https://www.wavtones.com/functiongenerator.php
 ## Todo (Sept 2025):    
 - [ ] Test release on each of the Mac M3, Linux x64 and arm, Windows x86 platforms  
 - [ ] Instructions for actually building in VSCode on each platform  
-
+- [ ] Instructions for making it run on startup/'service' for each platform  
