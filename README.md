@@ -1,5 +1,9 @@
 # 🔊 KeepSoundbarAwake
-(moved here from RobUttley/KeepSoundbarAwake)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+![.NET Core](https://img.shields.io/badge/.NET-Core-512BD4.svg?logo=dotnet&logoColor=white)
+![Project Status: Beta](https://img.shields.io/badge/Status-Beta-orange.svg)
+
+(moved here from RobUttley/KeepSoundbarAwake)  
 
 A simple cross-platform utility to prevent soundbars from entering standby mode during periods of inactivity.
 
@@ -90,6 +94,10 @@ xattr -d com.apple.quarantine libbass.dylib
 
 ## Tones came from  
 https://www.wavtones.com/functiongenerator.php
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
 
 ## Todo (Sept 2025):    
 - [ ] Test release on each of the Mac M3, Linux x64 and arm, Windows x86 platforms  
